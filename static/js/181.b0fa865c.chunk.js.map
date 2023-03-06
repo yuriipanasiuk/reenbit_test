@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/181.b0fa865c.chunk.js","mappings":"oIAQA,UARgB,WACd,OACE,0BACE,qCAGL,C","sources":["pages/СharacterDetails.js"],"sourcesContent":["const Details = () => {\n  return (\n    <div>\n      <h1>details</h1>\n    </div>\n  );\n};\n\nexport default Details;\n"],"names":[],"sourceRoot":""}
