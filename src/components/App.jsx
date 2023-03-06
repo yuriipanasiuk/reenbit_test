@@ -1,16 +1,27 @@
+import { lazy } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+import SharedLayout from './SharedLayout/SharedLayout';
+
+const Сharacters = lazy(() => import('../pages/Сharacters'));
+const СharacterDetails = lazy(() => import('../pages/СharacterDetails'));
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Navigate to="characters" />} />
+          <Route path="characters" element={<Сharacters />}>
+            <Route
+              path="characters:characterId"
+              element={<СharacterDetails />}
+            />
+          </Route>
+        </Route>
+      </Routes>
     </div>
   );
 };
+
+//TODO: add search method
