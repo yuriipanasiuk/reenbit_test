@@ -12,12 +12,11 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Navigate to="characters" />} />
-          <Route path="characters" element={<Сharacters />}>
-            <Route
-              path="characters:characterId"
-              element={<СharacterDetails />}
-            />
-          </Route>
+          <Route path="characters" element={<Сharacters />} />
+          <Route
+            path="characters/:characterId"
+            element={<СharacterDetails />}
+          />
         </Route>
       </Routes>
     </div>

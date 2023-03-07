@@ -18,6 +18,9 @@ export const theme = {
     specColor: 'rgba(0, 0, 0, 0.6)',
     placeholderColor: 'rgba(0, 0, 0, 0.5)',
     searchBtnColor: 'rgba(0, 0, 0, 0.54)',
+    detailName: '#081f32',
+    titleColor: '#8e8e93',
+    itemColor: ' #6e798c',
   },
   shadows: {
     shadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.75)',
@@ -28,6 +31,7 @@ export const theme = {
   radii: {
     normal: '4px',
     medium: '8px',
+    circle: '50%',
   },
   borders: {
     input: '1px solid rgba(0, 0, 0, 0.5)',

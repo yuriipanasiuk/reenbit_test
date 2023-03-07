@@ -7,3 +7,9 @@ export const getCharacters = async () => {
 
   return data.results;
 };
+
+export const getCharacterById = async id => {
+  const { data } = await axios(`/character/${id}`);
+
+  return data;
+};
