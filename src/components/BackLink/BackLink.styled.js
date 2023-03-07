@@ -18,6 +18,12 @@ export const TextLink = styled.p`
 `;
 
 export const Link = styled(StyledLink)`
-  display: flex;
+  display: inline-flex;
   text-decoration: none;
+
+  transition: scale 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  :hover {
+    scale: 1.02;
+  }
 `;

@@ -13,3 +13,13 @@ export const getCharacterById = async id => {
 
   return data;
 };
+
+export const searchCharacters = async query => {
+  const { data } = await axios(`/character`, {
+    params: {
+      name: query,
+    },
+  });
+
+  return data.results;
+};

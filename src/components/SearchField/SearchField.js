@@ -1,13 +1,27 @@
-import { Input, SearchBtn, Button, Form } from './SearchField.styled';
+// import { useDispatch } from 'react-redux';
 
-const SearchFiels = () => {
+import { Input, SearchBtn, Button, Form } from './SearchField.styled';
+// import { searchCharacters } from 'redux/searchSlice';
+
+const SearchFiels = ({ onSubmit }) => {
+  // const dispatch = useDispatch();
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const value = e.target.name.value;
+    onSubmit(value);
+    // dispatch(searchCharacters(value));
+
+    e.target.reset();
+  };
+
   return (
     <>
-      <Form>
+      <Form autoComplete="off" onSubmit={handleSubmit}>
         <Button type="submit">
           <SearchBtn size={24} />
         </Button>
-        <Input placeholder="Filter by name..." />
+        <Input type="text" name="name" placeholder="Filter by name..." />
       </Form>
     </>
   );

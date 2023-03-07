@@ -13,16 +13,16 @@ const СharacterDetails = () => {
   const { characterId } = useParams();
 
   useEffect(() => {
-    async function getCharacter() {
-      try {
+    try {
+      async function getCharacter() {
         const result = await getCharacterById(characterId);
 
         setChracterDetails(result);
-      } catch (error) {
-        console.log(error);
       }
+      getCharacter();
+    } catch (error) {
+      console.log(error);
     }
-    getCharacter();
   }, [characterId]);
 
   const backLink = location.state?.from ?? `/characters`;

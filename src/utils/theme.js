@@ -4,6 +4,7 @@ export const theme = {
     m: '16px',
     l: '18px',
     xl: '20px',
+    xxl: '48px',
   },
   fontWeight: {
     normal: 400,
@@ -36,6 +37,8 @@ export const theme = {
   borders: {
     input: '1px solid rgba(0, 0, 0, 0.5)',
     statCard: '1px solid #ffffff',
+    imageBorder: '5px solid #f2f2f7',
+    infoBorder: '1px solid rgba(33, 33, 33, 0.08)',
   },
   zIndices: {
     searchForm: '1100',
