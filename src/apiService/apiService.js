@@ -3,7 +3,11 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://rickandmortyapi.com/api';
 
 export const getCharacters = async () => {
-  const { data } = await axios('/character');
+  const { data } = await axios('/character', {
+    params: {
+      name: 'Rick',
+    },
+  });
 
   return data.results;
 };
@@ -15,11 +19,17 @@ export const getCharacterById = async id => {
 };
 
 export const searchCharacters = async query => {
-  const { data } = await axios(`/character`, {
-    params: {
-      name: query,
-    },
-  });
+  try {
+    const { data } = await axios(`/character`, {
+      params: {
+        name: query,
+      },
+    });
 
-  return data.results;
+    return data.results;
+  } catch (error) {
+    if (error.response && error.response.status === 404) {
+      return;
+    }
+  }
 };

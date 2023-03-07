@@ -22,6 +22,7 @@ export const theme = {
     detailName: '#081f32',
     titleColor: '#8e8e93',
     itemColor: ' #6e798c',
+    topButton: '#ff6b01',
   },
   shadows: {
     shadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.75)',
@@ -39,8 +40,5 @@ export const theme = {
     statCard: '1px solid #ffffff',
     imageBorder: '5px solid #f2f2f7',
     infoBorder: '1px solid rgba(33, 33, 33, 0.08)',
-  },
-  zIndices: {
-    searchForm: '1100',
   },
 };

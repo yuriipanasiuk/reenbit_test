@@ -12,8 +12,6 @@ import {
 const CharacterGallary = ({ items }) => {
   const location = useLocation();
 
-  // const sortItems = [...items].sort((a, b) => a.name.localeCompare(b.name));
-
   return (
     <>
       <CharacterList>

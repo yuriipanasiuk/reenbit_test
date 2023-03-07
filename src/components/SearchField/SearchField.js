@@ -1,18 +1,12 @@
-// import { useDispatch } from 'react-redux';
-
 import { Input, SearchBtn, Button, Form } from './SearchField.styled';
-// import { searchCharacters } from 'redux/searchSlice';
 
-const SearchFiels = ({ onSubmit }) => {
-  // const dispatch = useDispatch();
-
+const SearchFiels = ({ onChange, value }) => {
   const handleSubmit = e => {
     e.preventDefault();
-    const value = e.target.name.value;
-    onSubmit(value);
-    // dispatch(searchCharacters(value));
+    // const value = e.target.name.value;
+    // onSubmit(value);
 
-    e.target.reset();
+    // e.target.reset();
   };
 
   return (
@@ -21,7 +15,13 @@ const SearchFiels = ({ onSubmit }) => {
         <Button type="submit">
           <SearchBtn size={24} />
         </Button>
-        <Input type="text" name="name" placeholder="Filter by name..." />
+        <Input
+          type="text"
+          name="name"
+          placeholder="Filter by name..."
+          value={value}
+          onChange={e => onChange(e.target.value)}
+        />
       </Form>
     </>
   );
