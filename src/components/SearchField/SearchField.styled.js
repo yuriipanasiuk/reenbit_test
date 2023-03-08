@@ -25,11 +25,9 @@ export const Input = styled.input`
   }
 `;
 
-export const SearchBtn = styled(AiOutlineSearch)`
+export const SearchIcon = styled(AiOutlineSearch)`
   color: ${p => p.theme.colors.searchBtnColor};
-`;
 
-export const Button = styled.button`
   position: absolute;
   top: 12px;
   left: 16px;

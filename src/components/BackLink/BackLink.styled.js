@@ -13,6 +13,7 @@ export const TextLink = styled.p`
   font-weight: ${p => p.theme.fontWeight.bold};
   font-size: ${p => p.theme.fontSizes.l};
   line-height: 1.17;
+  text-transform: uppercase;
 
   color: ${p => p.theme.colors.black};
 `;

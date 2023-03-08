@@ -1,20 +1,10 @@
-import { Input, SearchBtn, Button, Form } from './SearchField.styled';
+import { Input, SearchIcon, Form } from './SearchField.styled';
 
 const SearchFiels = ({ onChange, value }) => {
-  const handleSubmit = e => {
-    e.preventDefault();
-    // const value = e.target.name.value;
-    // onSubmit(value);
-
-    // e.target.reset();
-  };
-
   return (
     <>
-      <Form autoComplete="off" onSubmit={handleSubmit}>
-        <Button type="submit">
-          <SearchBtn size={24} />
-        </Button>
+      <Form autoComplete="off">
+        <SearchIcon size={24} />
         <Input
           type="text"
           name="name"

@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
+import { useSelector } from 'react-redux';
 
 import SearchFiels from 'components/SearchField/SearchField';
 import CharacterContainer from 'components/CharacterContainer/CharacterContainer';
 import CharacterGallary from 'components/CharacterGallary/CharacterGallary';
 import HeaderImage from 'components/HeaderImage/HeaderImage';
 
-import { getCharacters, searchCharacters } from 'apiService/apiService';
+import { getCharacters } from 'apiService/apiService';
 import ToTopButton from 'components/ToTopButton/ToTopButton';
+import { selectIsLoggedIn } from 'redux/selectors';
 
 const Сharacter = () => {
   const [characters, setCharacters] = useState([]);
-  const [searchCharactes, setSearchCharacters] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [visibe, setVisible] = useState(false);
+
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const searchQuery = searchParams.get('name') ?? '';
 
@@ -36,19 +39,25 @@ const Сharacter = () => {
     setSearchParams(nextParams);
   };
 
+  const filtredCharacters = characters.filter(character =>
+    character.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const toTop = () => {
     scroll.scrollToTop();
   };
 
   useEffect(() => {
     try {
-      async function getAll() {
+      async function getAllCharacters() {
         const result = await getCharacters();
-
-        setCharacters(result);
+        const sortResult = [...result].sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+        setCharacters(sortResult);
       }
 
-      getAll();
+      getAllCharacters();
 
       scroll.scrollToTop();
       window.addEventListener('scroll', handleScroll);
@@ -61,54 +70,18 @@ const Сharacter = () => {
     }
   }, [scroll]);
 
-  useEffect(() => {
-    if (!searchQuery) {
-      return;
-    }
-
-    try {
-      const filterCharacter = async () => {
-        const result = await searchCharacters(searchQuery);
-
-        if (!result) {
-          return;
-        }
-
-        if (result.length > 0) {
-          setSearchCharacters(result);
-        }
-      };
-
-      filterCharacter();
-
-      scroll.scrollToTop();
-      window.addEventListener('scroll', handleScroll);
-
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    } catch (error) {
-      console.log('error');
-    }
-  }, [scroll, searchQuery]);
-
   return (
     <div>
-      <CharacterContainer>
-        <HeaderImage />
-        <SearchFiels value={searchQuery} onChange={getQuery} />
-        {searchCharactes.length > 0 ? (
-          <CharacterGallary items={searchCharactes} />
-        ) : (
-          <CharacterGallary items={characters} />
-        )}
-
-        {visibe && <ToTopButton onClick={toTop} />}
-      </CharacterContainer>
+      {isLoggedIn && (
+        <CharacterContainer>
+          <HeaderImage />
+          <SearchFiels value={searchQuery} onChange={getQuery} />
+          <CharacterGallary items={filtredCharacters} />
+          {visibe && <ToTopButton onClick={toTop} />}
+        </CharacterContainer>
+      )}
     </div>
   );
 };
 
 export default Сharacter;
-
-//TODO: add debounce on search input
