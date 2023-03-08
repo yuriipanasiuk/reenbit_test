@@ -2,6 +2,7 @@ import { lazy, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/hooks';
+import { refreshUser } from 'redux/authSlice';
 
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage/HomePage';
@@ -15,11 +16,15 @@ const LoginPage = lazy(() => import('pages/LoginPage'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+
+  const { isRefreshing, token } = useAuth();
 
   useEffect(() => {
-    // dispatch(refreshUser());
-  }, [dispatch]);
+    if (!token) {
+      return;
+    }
+    dispatch(refreshUser());
+  }, [dispatch, token]);
 
   return (
     !isRefreshing && (

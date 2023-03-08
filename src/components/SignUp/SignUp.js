@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setUser } from 'redux/authSlice';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { Navigate } from 'react-router-dom';
 
 import Form from 'components/Form/Form';
 
