@@ -1,33 +1,26 @@
 import { useDispatch } from 'react-redux';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-import { Wraper, UserName, Button } from './UserMenu.styled';
+import { Wraper, UserName, Button, Link } from './UserMenu.styled';
 
 import { logOut } from 'redux/authSlice';
-import { useState } from 'react';
+import { useAuth } from 'hooks/hooks';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
-  const [user, setUser] = useState();
+  const { user } = useAuth();
 
-  const auth = getAuth();
-
-  onAuthStateChanged(auth, user => {
-    if (user) {
-      const email = user.email;
-      setUser(email);
-    }
-  });
+  const handleLogout = () => {
+    dispatch(logOut());
+  };
 
   return (
     <Wraper>
-      <UserName>
-        Welcome,
-        {user}
-      </UserName>
-      <Button type="button" onClick={() => dispatch(logOut())}>
-        Log Out
-      </Button>
+      <UserName>Welcome, {user}</UserName>
+      <Link to="/login">
+        <Button type="button" onClick={handleLogout}>
+          Log Out
+        </Button>
+      </Link>
     </Wraper>
   );
 };

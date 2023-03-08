@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as StyledLink } from 'react-router-dom';
 
 export const Wraper = styled.div`
   display: flex;
@@ -27,4 +28,8 @@ export const Button = styled.button`
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
     color: ${p => p.theme.colors.black};
   }
+`;
+
+export const Link = styled(StyledLink)`
+  text-decoration: none;
 `;

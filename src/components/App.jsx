@@ -6,7 +6,6 @@ import { refreshUser } from 'redux/authSlice';
 
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage/HomePage';
-import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 
 const Сharacters = lazy(() => import('../pages/Сharacters'));
@@ -33,20 +32,10 @@ export const App = () => {
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Navigate to="home" />} />
             <Route path="home" element={<HomePage />} />
-            <Route
-              path="characters"
-              element={
-                <PrivateRoute component={Сharacters} redirectTo="/login" />
-              }
-            />
+            <Route path="characters" element={<Сharacters />} />
             <Route
               path="characters/:characterId"
-              element={
-                <PrivateRoute
-                  component={СharacterDetails}
-                  redirectTo="/login"
-                />
-              }
+              element={<СharacterDetails />}
             />
             <Route
               path="register"
