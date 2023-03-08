@@ -23,7 +23,7 @@ export const Button = styled.button`
   transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   :hover,
   :focus {
-    background-color: ${p => p.theme.colors.btnHover};
+    background-color: ${p => p.theme.colors.topButton};
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
     color: ${p => p.theme.colors.black};
   }
