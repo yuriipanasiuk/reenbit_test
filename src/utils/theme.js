@@ -23,6 +23,7 @@ export const theme = {
     titleColor: '#8e8e93',
     itemColor: ' #6e798c',
     topButton: '#ff6b01',
+    btnBg: '#337ab7',
   },
   shadows: {
     shadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.75)',

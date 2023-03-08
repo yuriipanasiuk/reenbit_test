@@ -7,7 +7,7 @@ export const Wraper = styled.div`
 `;
 
 export const UserName = styled.p`
-  font-weight: 700;
+  font-weight: ${p => p.theme.fontWeight.bold};
 `;
 
 export const Button = styled.button`
