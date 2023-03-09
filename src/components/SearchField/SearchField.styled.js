@@ -20,7 +20,6 @@ export const Input = styled.input`
   ::placeholder {
     font-size: ${p => p.theme.fontSizes.m};
     line-height: 1.5;
-
     color: ${p => p.theme.colors.placeholderColor};
   }
 `;
@@ -34,12 +33,4 @@ export const SearchIcon = styled(AiOutlineSearch)`
   border: none;
   background-color: transparent;
   padding: 0;
-
-  cursor: pointer;
-
-  transition: scale 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  :hover {
-    scale: 1.2;
-  }
 `;

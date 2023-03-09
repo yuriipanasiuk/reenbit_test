@@ -1,10 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { setUser } from 'redux/authSlice';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Form from 'components/Form/Form';
 
-const Login = () => {
+const Login = ({ title, link, text, redirect }) => {
   const dispatch = useDispatch();
 
   const handleLogin = (email, password) => {
@@ -20,10 +22,29 @@ const Login = () => {
           })
         )
       )
-      .catch(e => console.log(e));
+      .catch(e => {
+        if (e.message === 'Firebase: Error (auth/wrong-password).') {
+          return toast.error('Wrong password!');
+        }
+        if (e.message === 'Firebase: Error (auth/user-not-found).') {
+          return toast.error('User not found!');
+        }
+      });
   };
 
-  return <Form title="sin in" handleClick={handleLogin} />;
+  return (
+    <>
+      <Form
+        title="Login"
+        handleClick={handleLogin}
+        formTitle={title}
+        link={link}
+        text={text}
+        redirect={redirect}
+      />
+      <ToastContainer autoClose={3000} theme="light" />
+    </>
+  );
 };
 
 export default Login;

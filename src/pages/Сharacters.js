@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import { useSelector } from 'react-redux';
 
-import SearchFiels from 'components/SearchField/SearchField';
+import SearchField from 'components/SearchField/SearchField';
 import CharacterContainer from 'components/CharacterContainer/CharacterContainer';
 import CharacterGallary from 'components/CharacterGallary/CharacterGallary';
 import HeaderImage from 'components/HeaderImage/HeaderImage';
@@ -75,7 +75,7 @@ const Сharacter = () => {
       {isLoggedIn && (
         <CharacterContainer>
           <HeaderImage />
-          <SearchFiels value={searchQuery} onChange={getQuery} />
+          <SearchField value={searchQuery} onChange={getQuery} />
           <CharacterGallary items={filtredCharacters} />
           {visibe && <ToTopButton onClick={toTop} />}
         </CharacterContainer>
