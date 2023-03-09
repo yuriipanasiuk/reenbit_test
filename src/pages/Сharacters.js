@@ -3,8 +3,9 @@ import { useSearchParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import { useSelector } from 'react-redux';
 
-import SearchField from 'components/SearchField/SearchField';
+import { Container } from 'components/Container/Container';
 import CharacterContainer from 'components/CharacterContainer/CharacterContainer';
+import SearchField from 'components/SearchField/SearchField';
 import CharacterGallary from 'components/CharacterGallary/CharacterGallary';
 import HeaderImage from 'components/HeaderImage/HeaderImage';
 
@@ -73,12 +74,14 @@ const Сharacter = () => {
   return (
     <div>
       {isLoggedIn && (
-        <CharacterContainer>
-          <HeaderImage />
-          <SearchField value={searchQuery} onChange={getQuery} />
-          <CharacterGallary items={filtredCharacters} />
-          {visibe && <ToTopButton onClick={toTop} />}
-        </CharacterContainer>
+        <Container>
+          <CharacterContainer>
+            <HeaderImage />
+            <SearchField value={searchQuery} onChange={getQuery} />
+            <CharacterGallary items={filtredCharacters} />
+            {visibe && <ToTopButton onClick={toTop} />}
+          </CharacterContainer>
+        </Container>
       )}
     </div>
   );

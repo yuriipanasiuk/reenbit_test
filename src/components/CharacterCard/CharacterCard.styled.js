@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Image = styled.img`
-  width: 300px;
-  height: 300px;
   margin-bottom: ${p => p.theme.space[4]}px;
   border-radius: ${p => p.theme.radii.circle};
   border: ${p => p.theme.borders.imageBorder};
@@ -11,10 +9,15 @@ export const Image = styled.img`
 export const Name = styled.p`
   margin-bottom: 48px;
   font-weight: ${p => p.theme.fontWeight.normal};
-  font-size: ${p => p.theme.fontSizes.xxl};
+  font-size: ${p => p.theme.fontSizes.l};
   line-height: 1.17;
 
   color: ${p => p.theme.colors.detailName};
+
+  @media screen and (min-width: 768px) {
+    font-size: ${p => p.theme.fontSizes.xxl};
+    line-height: 1.17;
+  }
 `;
 
 export const Title = styled.p`
@@ -54,7 +57,11 @@ export const Item = styled.li`
 `;
 
 export const InformationWraper = styled.div`
-  width: 413px;
+  width: 220px;
+
+  @media screen and (min-width: 768px) {
+    width: 413px;
+  }
 `;
 
 export const Layout = styled.div`

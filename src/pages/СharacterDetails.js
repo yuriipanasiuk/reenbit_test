@@ -4,6 +4,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { getCharacterById } from 'apiService/apiService';
 import CharacterCard from 'components/CharacterCard/CharacterCard';
 import BackLink from 'components/BackLink/BackLink';
+import { Container } from 'components/Container/Container';
 import CharacterDetailContainer from 'components/CharacterDetailContainer/CharacterDetailContainer';
 
 const СharacterDetails = () => {
@@ -28,10 +29,12 @@ const СharacterDetails = () => {
   const backLink = location.state?.from ?? `/characters`;
 
   return (
-    <CharacterDetailContainer>
-      <BackLink link={backLink} />
-      <CharacterCard item={chracterDetails} />
-    </CharacterDetailContainer>
+    <Container>
+      <CharacterDetailContainer>
+        <BackLink link={backLink} />
+        <CharacterCard item={chracterDetails} />
+      </CharacterDetailContainer>
+    </Container>
   );
 };
 

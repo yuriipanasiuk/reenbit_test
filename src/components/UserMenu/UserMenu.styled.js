@@ -8,7 +8,11 @@ export const Wraper = styled.div`
 `;
 
 export const UserName = styled.p`
-  font-weight: ${p => p.theme.fontWeight.bold};
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-weight: ${p => p.theme.fontWeight.bold};
+  }
 `;
 
 export const Button = styled.button`

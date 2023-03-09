@@ -4,9 +4,22 @@ import { Link as StyledLink } from 'react-router-dom';
 export const CharacterList = styled.ul`
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 24px;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (min-width: 426px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export const ChatacterItem = styled.li`
@@ -24,8 +37,13 @@ export const ChatacterItem = styled.li`
 `;
 
 export const CharacterImg = styled.img`
-  width: 240px;
-  height: 170px;
+  width: 325px;
+  height: 190px;
+
+  @media screen and (min-width: 1440px) {
+    width: 240px;
+    height: 170px;
+  }
 `;
 
 export const TitleWraper = styled.div`

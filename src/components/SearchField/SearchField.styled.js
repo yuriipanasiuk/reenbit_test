@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 export const Form = styled.form`
   position: relative;
-  width: 1020px;
+
   margin-bottom: 56px;
 `;
 
@@ -16,6 +16,13 @@ export const Input = styled.input`
 
   border: ${p => p.theme.borders.input};
   border-radius: ${p => p.theme.radii.medium};
+
+  @media screen and (min-width: 320px) {
+    max-width: 668px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1020px;
+  }
 
   ::placeholder {
     font-size: ${p => p.theme.fontSizes.m};

@@ -7,15 +7,13 @@ export const StyledContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 320px) {
-    max-width: 767px;
-  }
-
   @media screen and (min-width: 768px) {
-    max-width: 1439px;
+    width: 768px;
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 1440px;
+    width: 1440px;
+    padding-left: 210px;
+    padding-right: 210px;
   }
 `;
