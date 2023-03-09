@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link as StyledLink } from 'react-router-dom';
+import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
 
 export const Wraper = styled.div`
   display: flex;
@@ -125,3 +126,17 @@ export const Link = styled(StyledLink)`
     color: ${p => p.theme.colors.redirectLinkHover};
   }
 `;
+
+export const PasswordWraper = styled.div`
+  position: relative;
+`;
+
+export const IconWraper = styled.div`
+  position: absolute;
+  right: 20px;
+  top: 13px;
+`;
+export const ShowIcon = styled(IoIosEye)`
+  color: ${p => p.theme.colors.btnRegBg};
+`;
+export const HideIcon = styled(IoIosEyeOff)``;

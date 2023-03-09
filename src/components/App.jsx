@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/hooks';
 import { refreshUser } from 'redux/authSlice';
 
-import SharedLayout from './SharedLayout/SharedLayout';
+import SharedLayout from './SharedLayout';
 import HomePage from 'pages/HomePage/HomePage';
 import { RestrictedRoute } from './RestrictedRoute';
 

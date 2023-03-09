@@ -1,6 +1,6 @@
 import { StyledLink } from './AuthNav.styled';
 
-export const AuthNav = () => {
+const AuthNav = () => {
   return (
     <div>
       <StyledLink to="/register">Register</StyledLink>
@@ -8,3 +8,5 @@ export const AuthNav = () => {
     </div>
   );
 };
+
+export default AuthNav;

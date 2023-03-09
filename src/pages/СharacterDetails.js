@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
 import { getCharacterById } from 'apiService/apiService';
-import CharacterCard from 'components/CharacterCard/CharacterCard';
-import BackLink from 'components/BackLink/BackLink';
-import { Container } from 'components/Container/Container';
-import CharacterDetailContainer from 'components/CharacterDetailContainer/CharacterDetailContainer';
+
+import CharacterCard from 'components/CharacterCard';
+import BackLink from 'components/BackLink';
+import Container from 'components/Container';
+import CharacterDetailContainer from 'components/CharacterDetailContainer';
 
 const СharacterDetails = () => {
   const [chracterDetails, setChracterDetails] = useState({});

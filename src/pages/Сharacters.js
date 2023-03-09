@@ -3,14 +3,14 @@ import { useSearchParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import { useSelector } from 'react-redux';
 
-import { Container } from 'components/Container/Container';
-import CharacterContainer from 'components/CharacterContainer/CharacterContainer';
-import SearchField from 'components/SearchField/SearchField';
-import CharacterGallary from 'components/CharacterGallary/CharacterGallary';
-import HeaderImage from 'components/HeaderImage/HeaderImage';
+import Container from 'components/Container';
+import CharacterContainer from 'components/CharacterContainer';
+import SearchField from 'components/SearchField';
+import CharacterGallary from 'components/CharacterGallary';
+import HeaderImage from 'components/HeaderImage';
+import ToTopButton from 'components/ToTopButton';
 
 import { getCharacters } from 'apiService/apiService';
-import ToTopButton from 'components/ToTopButton/ToTopButton';
 import { selectIsLoggedIn } from 'redux/selectors';
 
 const Сharacter = () => {

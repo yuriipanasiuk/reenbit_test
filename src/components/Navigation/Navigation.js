@@ -2,7 +2,7 @@ import { useAuth } from 'hooks/hooks';
 
 import { StyledLink, Nav } from './Navigation.styled';
 
-export const Navigation = () => {
+const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
@@ -12,3 +12,5 @@ export const Navigation = () => {
     </Nav>
   );
 };
+
+export default Navigation;
