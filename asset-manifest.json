@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/reenbit_test/static/css/main.89447ce7.css",
-    "main.js": "/reenbit_test/static/js/main.6c9f12d1.js",
-    "static/js/210.715c7689.chunk.js": "/reenbit_test/static/js/210.715c7689.chunk.js",
-    "static/js/66.6158a628.chunk.js": "/reenbit_test/static/js/66.6158a628.chunk.js",
-    "static/js/654.fa9197b2.chunk.js": "/reenbit_test/static/js/654.fa9197b2.chunk.js",
-    "static/js/285.8ec811d5.chunk.js": "/reenbit_test/static/js/285.8ec811d5.chunk.js",
+    "main.js": "/reenbit_test/static/js/main.1a123a33.js",
+    "static/js/210.25471682.chunk.js": "/reenbit_test/static/js/210.25471682.chunk.js",
+    "static/js/66.e2182b15.chunk.js": "/reenbit_test/static/js/66.e2182b15.chunk.js",
+    "static/js/654.5e4315ea.chunk.js": "/reenbit_test/static/js/654.5e4315ea.chunk.js",
+    "static/js/285.d2027ef2.chunk.js": "/reenbit_test/static/js/285.d2027ef2.chunk.js",
     "static/js/743.8d0021f6.chunk.js": "/reenbit_test/static/js/743.8d0021f6.chunk.js",
     "static/css/361.dd9c6092.chunk.css": "/reenbit_test/static/css/361.dd9c6092.chunk.css",
     "static/js/361.1c811030.chunk.js": "/reenbit_test/static/js/361.1c811030.chunk.js",
@@ -13,11 +13,11 @@
     "static/media/bg.png": "/reenbit_test/static/media/bg.33f1662b1fd59e892152.png",
     "index.html": "/reenbit_test/index.html",
     "main.89447ce7.css.map": "/reenbit_test/static/css/main.89447ce7.css.map",
-    "main.6c9f12d1.js.map": "/reenbit_test/static/js/main.6c9f12d1.js.map",
-    "210.715c7689.chunk.js.map": "/reenbit_test/static/js/210.715c7689.chunk.js.map",
-    "66.6158a628.chunk.js.map": "/reenbit_test/static/js/66.6158a628.chunk.js.map",
-    "654.fa9197b2.chunk.js.map": "/reenbit_test/static/js/654.fa9197b2.chunk.js.map",
-    "285.8ec811d5.chunk.js.map": "/reenbit_test/static/js/285.8ec811d5.chunk.js.map",
+    "main.1a123a33.js.map": "/reenbit_test/static/js/main.1a123a33.js.map",
+    "210.25471682.chunk.js.map": "/reenbit_test/static/js/210.25471682.chunk.js.map",
+    "66.e2182b15.chunk.js.map": "/reenbit_test/static/js/66.e2182b15.chunk.js.map",
+    "654.5e4315ea.chunk.js.map": "/reenbit_test/static/js/654.5e4315ea.chunk.js.map",
+    "285.d2027ef2.chunk.js.map": "/reenbit_test/static/js/285.d2027ef2.chunk.js.map",
     "743.8d0021f6.chunk.js.map": "/reenbit_test/static/js/743.8d0021f6.chunk.js.map",
     "361.dd9c6092.chunk.css.map": "/reenbit_test/static/css/361.dd9c6092.chunk.css.map",
     "361.1c811030.chunk.js.map": "/reenbit_test/static/js/361.1c811030.chunk.js.map",
@@ -25,6 +25,6 @@
   },
   "entrypoints": [
     "static/css/main.89447ce7.css",
-    "static/js/main.6c9f12d1.js"
+    "static/js/main.1a123a33.js"
   ]
 }
