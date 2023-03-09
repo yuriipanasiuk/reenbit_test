@@ -4,7 +4,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Form from 'components/Form/Form';
+import Form from 'components/Form';
 
 const SignUp = ({ title, link, text, redirect }) => {
   const dispatch = useDispatch();

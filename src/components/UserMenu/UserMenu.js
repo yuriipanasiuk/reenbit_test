@@ -5,7 +5,7 @@ import { Wraper, UserName, Button, Link } from './UserMenu.styled';
 import { logOut } from 'redux/authSlice';
 import { useAuth } from 'hooks/hooks';
 
-export const UserMenu = () => {
+const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
 
@@ -16,7 +16,7 @@ export const UserMenu = () => {
   return (
     <Wraper>
       <UserName>Welcome, {user}</UserName>
-      <Link to="/login">
+      <Link to="/home">
         <Button type="button" onClick={handleLogout}>
           Log Out
         </Button>
@@ -24,3 +24,5 @@ export const UserMenu = () => {
     </Wraper>
   );
 };
+
+export default UserMenu;

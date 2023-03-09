@@ -5,7 +5,7 @@ export const Title = styled.h2`
   font-weight: ${p => p.theme.fontWeight.medium};
   font-size: ${p => p.theme.fontSizes.xll};
   text-align: center;
-  margin-top: 200px;
+  padding-top: 200px;
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -18,4 +18,10 @@ export const StyledLink = styled(NavLink)`
     color: orange;
     text-decoration: underline;
   }
+`;
+
+export const Wraper = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: ${p => p.theme.colors.bg};
 `;
