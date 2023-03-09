@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/reenbit_test/static/css/main.89447ce7.css",
-    "main.js": "/reenbit_test/static/js/main.1a123a33.js",
-    "static/js/210.25471682.chunk.js": "/reenbit_test/static/js/210.25471682.chunk.js",
-    "static/js/66.e2182b15.chunk.js": "/reenbit_test/static/js/66.e2182b15.chunk.js",
-    "static/js/654.5e4315ea.chunk.js": "/reenbit_test/static/js/654.5e4315ea.chunk.js",
-    "static/js/285.d2027ef2.chunk.js": "/reenbit_test/static/js/285.d2027ef2.chunk.js",
+    "main.js": "/reenbit_test/static/js/main.0fb4ce0e.js",
+    "static/js/324.0ea67b92.chunk.js": "/reenbit_test/static/js/324.0ea67b92.chunk.js",
+    "static/js/983.ca53a475.chunk.js": "/reenbit_test/static/js/983.ca53a475.chunk.js",
+    "static/js/605.29cc2cfa.chunk.js": "/reenbit_test/static/js/605.29cc2cfa.chunk.js",
+    "static/js/597.ff1c852f.chunk.js": "/reenbit_test/static/js/597.ff1c852f.chunk.js",
+    "static/css/123.fe5289bf.chunk.css": "/reenbit_test/static/css/123.fe5289bf.chunk.css",
+    "static/js/123.596db481.chunk.js": "/reenbit_test/static/js/123.596db481.chunk.js",
     "static/js/743.8d0021f6.chunk.js": "/reenbit_test/static/js/743.8d0021f6.chunk.js",
-    "static/css/361.dd9c6092.chunk.css": "/reenbit_test/static/css/361.dd9c6092.chunk.css",
-    "static/js/361.1c811030.chunk.js": "/reenbit_test/static/js/361.1c811030.chunk.js",
     "static/js/253.87abfecf.chunk.js": "/reenbit_test/static/js/253.87abfecf.chunk.js",
     "static/media/bg.png": "/reenbit_test/static/media/bg.33f1662b1fd59e892152.png",
     "index.html": "/reenbit_test/index.html",
     "main.89447ce7.css.map": "/reenbit_test/static/css/main.89447ce7.css.map",
-    "main.1a123a33.js.map": "/reenbit_test/static/js/main.1a123a33.js.map",
-    "210.25471682.chunk.js.map": "/reenbit_test/static/js/210.25471682.chunk.js.map",
-    "66.e2182b15.chunk.js.map": "/reenbit_test/static/js/66.e2182b15.chunk.js.map",
-    "654.5e4315ea.chunk.js.map": "/reenbit_test/static/js/654.5e4315ea.chunk.js.map",
-    "285.d2027ef2.chunk.js.map": "/reenbit_test/static/js/285.d2027ef2.chunk.js.map",
+    "main.0fb4ce0e.js.map": "/reenbit_test/static/js/main.0fb4ce0e.js.map",
+    "324.0ea67b92.chunk.js.map": "/reenbit_test/static/js/324.0ea67b92.chunk.js.map",
+    "983.ca53a475.chunk.js.map": "/reenbit_test/static/js/983.ca53a475.chunk.js.map",
+    "605.29cc2cfa.chunk.js.map": "/reenbit_test/static/js/605.29cc2cfa.chunk.js.map",
+    "597.ff1c852f.chunk.js.map": "/reenbit_test/static/js/597.ff1c852f.chunk.js.map",
+    "123.fe5289bf.chunk.css.map": "/reenbit_test/static/css/123.fe5289bf.chunk.css.map",
+    "123.596db481.chunk.js.map": "/reenbit_test/static/js/123.596db481.chunk.js.map",
     "743.8d0021f6.chunk.js.map": "/reenbit_test/static/js/743.8d0021f6.chunk.js.map",
-    "361.dd9c6092.chunk.css.map": "/reenbit_test/static/css/361.dd9c6092.chunk.css.map",
-    "361.1c811030.chunk.js.map": "/reenbit_test/static/js/361.1c811030.chunk.js.map",
     "253.87abfecf.chunk.js.map": "/reenbit_test/static/js/253.87abfecf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89447ce7.css",
-    "static/js/main.1a123a33.js"
+    "static/js/main.0fb4ce0e.js"
   ]
 }
