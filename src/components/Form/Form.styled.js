@@ -18,7 +18,10 @@ export const Container = styled.div`
   border-radius: ${p => p.theme.radii.big};
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: ${p => p.theme.colors.white};
+
+  @media screen and (min-width: 768px) {
+    background-color: ${p => p.theme.colors.white};
+  }
 `;
 
 export const Title = styled.h2`
@@ -38,7 +41,7 @@ export const StyledForm = styled.form`
 `;
 
 export const Input = styled.input`
-  width: 458px;
+  width: 280px;
   margin-bottom: ${p => p.theme.space[4]}px;
 
   padding-top: 14px;
@@ -54,6 +57,14 @@ export const Input = styled.input`
   border: ${p => p.theme.borders.inputLogin};
   border-radius: ${p => p.theme.radii.big};
 
+  @media screen and (min-width: 425px) {
+    width: 330px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 458px;
+  }
+
   ::placeholder {
     color: ${p => p.theme.colors.formPlaceholder};
   }
@@ -64,7 +75,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 458px;
+  width: 280px;
   height: 48px;
   margin-bottom: ${p => p.theme.space[4]}px;
 
@@ -84,6 +95,14 @@ export const Button = styled.button`
   cursor: pointer;
 
   transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  @media screen and (min-width: 425px) {
+    width: 330px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 458px;
+  }
 
   :hover {
     border: ${p => p.theme.borders.regButtonBorder};

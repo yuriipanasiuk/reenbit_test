@@ -18,3 +18,12 @@ export const StyledLink = styled(NavLink)`
     margin-right: ${p => p.theme.space[4]}px;
   }
 `;
+
+export const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
