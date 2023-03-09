@@ -1,6 +1,6 @@
 import { Input, SearchIcon, Form } from './SearchField.styled';
 
-const SearchFiels = ({ onChange, value }) => {
+const SearchField = ({ onChange, value }) => {
   return (
     <>
       <Form autoComplete="off">
@@ -17,4 +17,4 @@ const SearchFiels = ({ onChange, value }) => {
   );
 };
 
-export default SearchFiels;
+export default SearchField;

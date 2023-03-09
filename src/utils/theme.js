@@ -4,6 +4,8 @@ export const theme = {
     m: '16px',
     l: '18px',
     xl: '20px',
+    xsl: '36px',
+    xll: '38px',
     xxl: '48px',
   },
   fontWeight: {
@@ -24,6 +26,12 @@ export const theme = {
     itemColor: ' #6e798c',
     topButton: '#ff6b01',
     btnBg: 'orange',
+    formPlaceholder: 'rgba(17, 17, 17, 0.6)',
+    bg: '#fdf7f2',
+    btnRegBg: '#f59256',
+    redirectLink: ' #3091eb',
+    redirectLinkHover: '#ff6101',
+    linkTextColor: 'rgba(17, 17, 17, 0.6)',
   },
   shadows: {
     shadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.75)',
@@ -35,11 +43,15 @@ export const theme = {
     normal: '4px',
     medium: '8px',
     circle: '50%',
+    big: '40px',
   },
   borders: {
     input: '1px solid rgba(0, 0, 0, 0.5)',
     statCard: '1px solid #ffffff',
     imageBorder: '5px solid #f2f2f7',
     infoBorder: '1px solid rgba(33, 33, 33, 0.08)',
+    inputLogin: '1px solid rgba(245, 146, 86, 0.5)',
+    regButtonBorder: '2px solid #ff6101',
+    headerBorder: '1px solid #2a363b',
   },
 };

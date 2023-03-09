@@ -12,16 +12,19 @@ export const UserName = styled.p`
 `;
 
 export const Button = styled.button`
+  width: 100px;
   display: block;
   background-color: ${p => p.theme.colors.btnBg};
   color: ${p => p.theme.colors.white};
   font-weight: ${p => p.theme.fontWeight.bold};
-  border-radius: ${p => p.theme.radii.normal};
+  border-radius: ${p => p.theme.radii.medium};
   padding-top: ${p => p.theme.space[2]}px;
   padding-bottom: ${p => p.theme.space[2]}px;
   border: none;
   cursor: pointer;
+
   transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
   :hover,
   :focus {
     background-color: ${p => p.theme.colors.topButton};
